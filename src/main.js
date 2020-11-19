@@ -1,12 +1,13 @@
 import Vue from 'vue'
 import App from './App.vue'
-import VueRouter from 'vue-router'
+import VueRouter from 'vue-router' // Nos permitira navegar entre paginas
 import LastArticles from './components/LastArticles.vue'
 import MiComponente from './components/MiComponente.vue'
 import HolaMundo from './components/HelloWorld.vue'
 import Blog from './components/Blog.vue'
 import Formulario from './components/Formulario.vue'
 import Pagina from './components/Pagina.vue'
+import ErrorComponent from './components/ErrorComponent.vue'
 
 
 Vue.config.productionTip = false
@@ -21,7 +22,8 @@ const routes = [
   { path: '/ultimos-articulos', component: LastArticles },
   { path: '/mi-componente', component: MiComponente },
   { path: '/', component: LastArticles },
-  { path: '/hola-mundo', component: HolaMundo }
+  { path: '/hola-mundo', component: HolaMundo },
+  { path: '*', component: ErrorComponent }
   
 ];
 

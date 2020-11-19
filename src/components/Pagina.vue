@@ -10,6 +10,9 @@
 <script>
 export default {
     name: 'Pagina',
+
+    // Start Hooks
+
     created() {
         console.log('Componente creado');
     },
@@ -26,6 +29,8 @@ export default {
     destroyed() {
         console.log('Componente eliminado');
     },
+
+    // End hooks
 
     data() {
         return {
