@@ -3,6 +3,7 @@
         <h2 class="subheader">P&aacute;gina de prueba</h2>
         <h2>{{ id_desde_url }}</h2>
         <button @click="actualizarNombre()">Actualizar Nombre</button>
+        <button @click="redirigirRuta()">Redirigir</button>
         <h4>{{ nombre }}</h4>
     </section>
 </template>
@@ -44,6 +45,12 @@ export default {
         actualizarNombre() {
             this.nombre = 'Ararat Ibarrola';
             console.log(this.nombre);
+        },
+
+        redirigirRuta() {
+            // Redireccion
+            this.$router.push('/blog');
+            // this.$router.push({ name: 'pagina', params:{ id: 'Redirigir' } });
         }
     } 
 }
