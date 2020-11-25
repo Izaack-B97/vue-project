@@ -5,6 +5,10 @@
         <button @click="actualizarNombre()">Actualizar Nombre</button>
         <button @click="redirigirRuta()">Redirigir</button>
         <h4>{{ nombre }}</h4>
+        <h2>Reactividad</h2>
+        <input type="text" v-model="mensaje"/>
+        <p>Este es mi mensaje: <b>{{ mensaje }}</b></p>
+        <pre>{{ $data }}</pre>
     </section>
 </template>
 
@@ -36,7 +40,8 @@ export default {
     data() {
         return {
             id_desde_url: null,
-            nombre: 'Isaac Bustamante'
+            nombre: 'Isaac Bustamante',
+            mensaje: ''
         };
     },
 
